@@ -16,9 +16,9 @@ public class InterswitchAuthSample {
 	private static final String SIGNATURE = "SIGNATURE";
 	private static final String AUTHORIZATION = "AUTHORIZATION";
 
-	private static final String CLIENT_ID = "20FCA3E4D0574CF8B494E4619713606C";
-	private static final String CLIENT_SECRET = "k1F4EXtYfKHxUCtVSLfRp6U+wrqdr+l/17acNDf/aOFekBxTTMB+TmfOxnfp4rTy";
-
+	private static final String CLIENT_ID = "CLIENT_ID";
+	private static final String CLIENT_SECRET = "CLIENT_SECRET";
+	
 	public static void main(String[] args) throws Exception {
 		getInterswitchAuth();
 	}
