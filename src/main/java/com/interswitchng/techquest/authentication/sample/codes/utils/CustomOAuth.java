@@ -22,9 +22,9 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.simple.parser.JSONParser;
 
-public class PassportAuth {
+public class CustomOAuth {
 
-	private static final String PASSPORT_OAUTH_TOKEN_RESOURCE_URL = "http://172.25.20.140:5050/passport/oauth/token";
+	private static final String PASSPORT_OAUTH_TOKEN_RESOURCE_URL = "http://sandbox.interswitchng.com/passport/oauth/token";
 	
 	private static final String TIMESTAMP = "TIMESTAMP";
 	private static final String NONCE = "NONCE";

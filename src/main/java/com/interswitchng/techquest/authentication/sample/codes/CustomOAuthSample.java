@@ -4,9 +4,9 @@ import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 
-import com.interswitchng.techquest.authentication.sample.codes.utils.PassportAuth;
+import com.interswitchng.techquest.authentication.sample.codes.utils.CustomOAuth;
 
-public class PassportAuthSample {
+public class CustomOAuthSample {
 
 	public static final String RESOURCE_URL = "https://sandbox.interswitchng.com/api/v1/payment/purchases";
 
@@ -20,10 +20,10 @@ public class PassportAuthSample {
 	private static final String CLIENT_SECRET = "CLIENT_SECRET";
 	
 	public static void main(String[] args) throws Exception {
-		getPassportAuth();
+		getCustomOAuth();
 	}
 
-	public static void getPassportAuth() throws UnsupportedEncodingException, NoSuchAlgorithmException {
+	public static void getCustomOAuth() throws UnsupportedEncodingException, NoSuchAlgorithmException {
 
 		// Authentication is done via a POST Method.
 		String httpMethod = "POST";
@@ -44,7 +44,7 @@ public class PassportAuthSample {
 		// This our Authorization details that we'll add to our headers,
 		// the InterswitchAuth configuration can be found under Authentications
 		// above.
-		HashMap<String, String> passportAuth = PassportAuth.generatePassportAuth(httpMethod, resourceUrl,
+		HashMap<String, String> passportAuth = CustomOAuth.generatePassportAuth(httpMethod, resourceUrl,
 				clientId, clientSecretKey, null, signatureMethod);
 
 		// Print generated values
