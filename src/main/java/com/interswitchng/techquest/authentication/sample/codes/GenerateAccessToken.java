@@ -16,7 +16,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-public class GenerateBearerAuth {
+public class GenerateAccessToken {
 	
 	private static final String PASSPORT_OAUTH_TOKEN_RESOURCE_URL = "https://sandbox.interswitchng.com/passport/oauth/token";
 	private static final String CLIENT_ID = "CLIENT_ID";
