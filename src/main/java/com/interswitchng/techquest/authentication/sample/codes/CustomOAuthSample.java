@@ -44,15 +44,15 @@ public class CustomOAuthSample {
 		// This our Authorization details that we'll add to our headers,
 		// the InterswitchAuth configuration can be found under Authentications
 		// above.
-		HashMap<String, String> passportAuth = CustomOAuth.generateCustomOAuth(httpMethod, resourceUrl,
+		HashMap<String, String> customOAuth = CustomOAuth.generateCustomOAuth(httpMethod, resourceUrl,
 				clientId, clientSecretKey, null, signatureMethod);
 
 		// Print generated values
-		System.out.println("Authorization: " + passportAuth.get(AUTHORIZATION));
-		System.out.println("Timestamp: " + passportAuth.get(TIMESTAMP));
-		System.out.println("Nonce: " + passportAuth.get(NONCE));
-		System.out.println("Signature: " + passportAuth.get(SIGNATURE));
-		System.out.println("SignatureMethod: " + passportAuth.get(SIGNATURE_METHOD));
+		System.out.println("Authorization: " + customOAuth.get(AUTHORIZATION));
+		System.out.println("Timestamp: " + customOAuth.get(TIMESTAMP));
+		System.out.println("Nonce: " + customOAuth.get(NONCE));
+		System.out.println("Signature: " + customOAuth.get(SIGNATURE));
+		System.out.println("SignatureMethod: " + customOAuth.get(SIGNATURE_METHOD));
 
 	}
 
