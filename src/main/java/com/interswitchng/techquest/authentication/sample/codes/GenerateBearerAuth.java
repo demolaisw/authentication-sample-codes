@@ -1,10 +1,9 @@
-package com.interswitch.techquest.easi.auth.data.generate;
+package com.interswitchng.techquest.authentication.sample.codes;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-import org.apache.commons.net.util.Base64;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -19,9 +18,9 @@ import org.json.simple.parser.ParseException;
 
 public class GenerateBearerAuth {
 	
-	private static final String PASSPORT_OAUTH_TOKEN_RESOURCE_URL = "http://172.25.20.140:5050/passport/oauth/token";
-	private static final String CLIENT_ID = "20FCA3E4D0574CF8B494E4619713606C";
-	private static final String CLIENT_SECRET = "k1F4EXtYfKHxUCtVSLfRp6U+wrqdr+l/17acNDf/aOFekBxTTMB+TmfOxnfp4rTy";
+	private static final String PASSPORT_OAUTH_TOKEN_RESOURCE_URL = "http://passport.interswitchng.com/passport/oauth/token";
+	private static final String CLIENT_ID = "CLIENT_ID";
+	private static final String CLIENT_SECRET = "CLIENT_SECRET";
 
 	
 	public static void main(String[] args) throws ClientProtocolException, IOException, ParseException {
@@ -30,7 +29,7 @@ public class GenerateBearerAuth {
 		
 		String cipher = CLIENT_ID + ":" + CLIENT_SECRET;
 		
-		String cipher64 = new String(Base64.encodeBase64(cipher.getBytes()));
+		String cipher64 = new String(org.apache.commons.codec.binary.Base64.encodeBase64(cipher.getBytes()));
 		
 		String authorizationData = "Basic " + cipher64; // Authorization Data
 		
