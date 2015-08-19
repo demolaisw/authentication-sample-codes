@@ -8,7 +8,7 @@ import com.interswitchng.techquest.authentication.sample.codes.utils.PassportAut
 
 public class PassportAuthSample {
 
-	public static final String RESOURCE_URL = "https://172.25.20.56:9080/api/v1/payment/purchases";
+	public static final String RESOURCE_URL = "https://sandbox.interswitchng.com/api/v1/payment/purchases";
 
 	private static final String TIMESTAMP = "TIMESTAMP";
 	private static final String NONCE = "NONCE";

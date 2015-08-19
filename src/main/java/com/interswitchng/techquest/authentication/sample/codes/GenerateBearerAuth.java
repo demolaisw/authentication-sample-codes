@@ -18,7 +18,7 @@ import org.json.simple.parser.ParseException;
 
 public class GenerateBearerAuth {
 	
-	private static final String PASSPORT_OAUTH_TOKEN_RESOURCE_URL = "http://passport.interswitchng.com/passport/oauth/token";
+	private static final String PASSPORT_OAUTH_TOKEN_RESOURCE_URL = "https://sandbox.interswitchng.com/passport/oauth/token";
 	private static final String CLIENT_ID = "CLIENT_ID";
 	private static final String CLIENT_SECRET = "CLIENT_SECRET";
 
