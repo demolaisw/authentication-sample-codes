@@ -35,7 +35,7 @@ public class CustomOAuth {
 	private static final String AUTHORIZATION_REALM = "Bearer ";
 	private static final String ISO_8859_1 = "ISO-8859-1";
 
-	public static HashMap<String, String> generatePassportAuth(
+	public static HashMap<String, String> generateCustomOAuth(
 			String httpMethod, String resourceUrl, String clientId,
 			String clientSecretKey, String additionalParameters,
 			String signatureMethod) throws UnsupportedEncodingException,

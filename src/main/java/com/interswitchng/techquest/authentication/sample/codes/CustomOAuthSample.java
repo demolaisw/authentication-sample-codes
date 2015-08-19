@@ -44,7 +44,7 @@ public class CustomOAuthSample {
 		// This our Authorization details that we'll add to our headers,
 		// the InterswitchAuth configuration can be found under Authentications
 		// above.
-		HashMap<String, String> passportAuth = CustomOAuth.generatePassportAuth(httpMethod, resourceUrl,
+		HashMap<String, String> passportAuth = CustomOAuth.generateCustomOAuth(httpMethod, resourceUrl,
 				clientId, clientSecretKey, null, signatureMethod);
 
 		// Print generated values
