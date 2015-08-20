@@ -18,14 +18,14 @@ import org.json.simple.parser.ParseException;
 
 public class GenerateAccessToken {
 	
-	private static final String PASSPORT_OAUTH_TOKEN_RESOURCE_URL = "https://sandbox.interswitchng.com/passport/oauth/token";
+	private static final String OAUTH_TOKEN_RESOURCE_URL = "https://sandbox.interswitchng.com/passport/oauth/token";
 	private static final String CLIENT_ID = "CLIENT_ID";
 	private static final String CLIENT_SECRET = "CLIENT_SECRET";
 
 	
 	public static void main(String[] args) throws ClientProtocolException, IOException, ParseException {
 		
-		String resourceUrl = PASSPORT_OAUTH_TOKEN_RESOURCE_URL;
+		String resourceUrl = OAUTH_TOKEN_RESOURCE_URL;
 		
 		String cipher = CLIENT_ID + ":" + CLIENT_SECRET;
 		

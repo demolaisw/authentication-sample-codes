@@ -4,9 +4,9 @@ import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 
-import com.interswitchng.techquest.authentication.sample.codes.utils.CustomOAuth;
+import com.interswitchng.techquest.authentication.sample.codes.utils.OAuth;
 
-public class CustomOAuthSample {
+public class OAuthSample {
 
 	public static final String RESOURCE_URL = "https://sandbox.interswitchng.com/api/v1/payment/purchases";
 
@@ -20,10 +20,10 @@ public class CustomOAuthSample {
 	private static final String CLIENT_SECRET = "CLIENT_SECRET";
 	
 	public static void main(String[] args) throws Exception {
-		getCustomOAuth();
+		getOAuth();
 	}
 
-	public static void getCustomOAuth() throws UnsupportedEncodingException, NoSuchAlgorithmException {
+	public static void getOAuth() throws UnsupportedEncodingException, NoSuchAlgorithmException {
 
 		// Authentication is done via a POST Method.
 		String httpMethod = "POST";
@@ -44,15 +44,15 @@ public class CustomOAuthSample {
 		// This our Authorization details that we'll add to our headers,
 		// the InterswitchAuth configuration can be found under Authentications
 		// above.
-		HashMap<String, String> customOAuth = CustomOAuth.generateCustomOAuth(httpMethod, resourceUrl,
+		HashMap<String, String> oAuth = OAuth.generateOAuth(httpMethod, resourceUrl,
 				clientId, clientSecretKey, null, signatureMethod);
 
 		// Print generated values
-		System.out.println("Authorization: " + customOAuth.get(AUTHORIZATION));
-		System.out.println("Timestamp: " + customOAuth.get(TIMESTAMP));
-		System.out.println("Nonce: " + customOAuth.get(NONCE));
-		System.out.println("Signature: " + customOAuth.get(SIGNATURE));
-		System.out.println("SignatureMethod: " + customOAuth.get(SIGNATURE_METHOD));
+		System.out.println("Authorization: " + oAuth.get(AUTHORIZATION));
+		System.out.println("Timestamp: " + oAuth.get(TIMESTAMP));
+		System.out.println("Nonce: " + oAuth.get(NONCE));
+		System.out.println("Signature: " + oAuth.get(SIGNATURE));
+		System.out.println("SignatureMethod: " + oAuth.get(SIGNATURE_METHOD));
 
 	}
 
